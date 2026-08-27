@@ -5,7 +5,7 @@ import {defineConfig} from 'vite';
 
 export default defineConfig(() => {
   return {
-    return {
+  
   base: '/aj-studio-portfolio/',
   plugins: [react(), tailwindcss()],
     resolve: {
