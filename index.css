@@ -1,0 +1,124 @@
+@import "tailwindcss";
+
+@theme {
+  --font-serif: 'Instrument Serif', Georgia, serif;
+  --font-display: 'Syne', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-heading: 'Space Grotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+  
+  /* Primary Cinematic Editorial Palette */
+  --color-charcoal-deep: #0D0E12;
+  --color-charcoal: #111318;
+  --color-charcoal-card: #161922;
+  --color-charcoal-elevated: #1C202B;
+  --color-charcoal-border: #232733;
+  --color-charcoal-border-light: #2E3342;
+  
+  --color-warm-ivory: #F2EDE3;
+  --color-warm-cream: #E5DFD3;
+  --color-warm-muted: #C4BDAC;
+  
+  --color-soft-grey: #A8A9AD;
+  --color-soft-grey-muted: #72747B;
+  
+  --color-cobalt: #3D5AFE;
+  --color-cobalt-glow: rgba(61, 90, 254, 0.15);
+  
+  --color-amber: #D89B55;
+  --color-amber-glow: rgba(216, 155, 85, 0.15);
+}
+
+/* Custom editorial typography & aesthetics */
+html {
+  scroll-behavior: smooth;
+  color-scheme: dark;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: #111318;
+  color: #F2EDE3;
+  overflow-x: hidden;
+  letter-spacing: -0.01em;
+}
+
+.font-serif-editorial {
+  font-family: var(--font-serif);
+}
+
+.font-display-title {
+  font-family: var(--font-display);
+}
+
+.font-heading-clean {
+  font-family: var(--font-heading);
+}
+
+.font-code-meta {
+  font-family: var(--font-mono);
+}
+
+/* Subtle cinematic film grain overlay (very faint, pure CSS radial dots) */
+.film-grain {
+  background-image: radial-gradient(rgba(255,255,255,0.035) 1px, transparent 0);
+  background-size: 28px 28px;
+}
+
+.film-grain-dark {
+  background-image: radial-gradient(rgba(255,255,255,0.03) 1px, transparent 0);
+  background-size: 28px 28px;
+}
+
+/* Atmospheric vignette */
+.cinematic-vignette {
+  background: radial-gradient(circle at center, transparent 50%, rgba(13,14,18,0.7) 100%);
+}
+
+/* Custom subtle borders */
+.border-editorial {
+  border-color: #232733;
+}
+
+.border-dark-editorial {
+  border-color: #2E3342;
+}
+
+/* Smooth custom scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0D0E12;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #232733;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #3D5AFE;
+}
+
+/* Transitions */
+.transition-cinematic {
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Print stylesheet for Resume generation */
+@media print {
+  body {
+    background: white !important;
+    color: black !important;
+  }
+  .no-print {
+    display: none !important;
+  }
+  .print-only {
+    display: block !important;
+  }
+}
+
+
